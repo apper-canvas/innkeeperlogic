@@ -46,27 +46,27 @@ const RoomStatusCard = ({ room, onStatusChange, onViewDetails }) => {
       <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full" />
       
       <div className="flex items-start justify-between mb-4">
-        <div>
-          <h3 className="text-lg font-bold text-gray-900">Room {room.number}</h3>
-          <p className="text-sm text-gray-600">{room.type} • Floor {room.floor}</p>
+<div>
+          <h3 className="text-lg font-bold text-gray-900">Room {room.number_c}</h3>
+          <p className="text-sm text-gray-600">{room.type_c} • Floor {room.floor_c}</p>
         </div>
-        <Badge variant={getStatusColor(room.status)}>
+<Badge variant={getStatusColor(room.status_c)}>
           <ApperIcon 
-            name={getStatusIcon(room.status)} 
+            name={getStatusIcon(room.status_c)} 
             className="h-3 w-3 mr-1" 
           />
-          {formatStatus(room.status)}
+          {formatStatus(room.status_c)}
         </Badge>
       </div>
 
       <div className="space-y-2 mb-4">
         <div className="flex justify-between text-sm">
-          <span className="text-gray-600">Base Rate</span>
-          <span className="font-medium">${room.baseRate}/night</span>
+<span className="text-gray-600">Base Rate</span>
+          <span className="font-medium">${room.base_rate_c}/night</span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-600">Max Occupancy</span>
-          <span className="font-medium">{room.maxOccupancy} guests</span>
+          <span className="font-medium">{room.max_occupancy_c} guests</span>
         </div>
       </div>
 

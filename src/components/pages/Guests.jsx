@@ -41,19 +41,19 @@ const Guests = () => {
 
     // Filter by search term
     if (searchTerm) {
-      filtered = filtered.filter(guest =>
-        guest.firstName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        guest.lastName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        guest.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        guest.phone.includes(searchTerm)
+filtered = filtered.filter(guest =>
+        guest.first_name_c?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        guest.last_name_c?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        guest.email_c?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        guest.phone_c?.includes(searchTerm)
       );
     }
 
     // Filter by VIP status
-    if (vipFilter === "vip") {
-      filtered = filtered.filter(guest => guest.vipStatus);
+if (vipFilter === "vip") {
+      filtered = filtered.filter(guest => guest.vip_status_c);
     } else if (vipFilter === "regular") {
-      filtered = filtered.filter(guest => !guest.vipStatus);
+      filtered = filtered.filter(guest => !guest.vip_status_c);
     }
 
     setFilteredGuests(filtered);
@@ -80,11 +80,11 @@ const Guests = () => {
   if (loading) return <Loading type="cards" />;
   if (error) return <Error message={error} onRetry={loadGuests} />;
 
-  const guestStats = {
+const guestStats = {
     total: guests.length,
-    vip: guests.filter(g => g.vipStatus).length,
-    regular: guests.filter(g => !g.vipStatus).length,
-    withStays: guests.filter(g => g.stayHistory.length > 0).length
+    vip: guests.filter(g => g.vip_status_c).length,
+    regular: guests.filter(g => !g.vip_status_c).length,
+    withStays: guests.filter(g => g.created_at_c).length
   };
 
   return (

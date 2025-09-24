@@ -76,8 +76,8 @@ const Dashboard = () => {
     })
     .reduce((sum, reservation) => sum + reservation.totalAmount, 0);
 
-  const pendingTasks = tasks.filter(task => task.status === "pending").length;
-  const vipGuests = guests.filter(guest => guest.vipStatus).length;
+const pendingTasks = tasks.filter(task => task.status === "pending").length;
+  const vipGuests = guests.filter(guest => guest.vip_status_c).length;
 
   const recentReservations = reservations
     .filter(r => r.status === "confirmed" || r.status === "checked-in")

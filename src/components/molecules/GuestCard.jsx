@@ -9,17 +9,17 @@ const GuestCard = ({ guest, onViewProfile, onEditGuest }) => {
     <Card hover className="p-6">
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center space-x-3">
-          <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
-            {guest.firstName.charAt(0)}{guest.lastName.charAt(0)}
+<div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+            {guest.first_name_c?.charAt(0) || 'G'}{guest.last_name_c?.charAt(0) || 'U'}
           </div>
           <div>
             <h3 className="text-lg font-semibold text-gray-900">
-              {guest.firstName} {guest.lastName}
+              {guest.first_name_c} {guest.last_name_c}
             </h3>
-            <p className="text-sm text-gray-600">{guest.email}</p>
+            <p className="text-sm text-gray-600">{guest.email_c}</p>
           </div>
         </div>
-        {guest.vipStatus && (
+        {guest.vip_status_c && (
           <Badge variant="warning">
             <ApperIcon name="Crown" className="h-3 w-3 mr-1" />
             VIP
@@ -29,16 +29,16 @@ const GuestCard = ({ guest, onViewProfile, onEditGuest }) => {
 
       <div className="space-y-2 mb-4">
         <div className="flex items-center text-sm text-gray-600">
-          <ApperIcon name="Phone" className="h-4 w-4 mr-2" />
-          {guest.phone}
+<ApperIcon name="Phone" className="h-4 w-4 mr-2" />
+          {guest.phone_c}
         </div>
         <div className="flex items-center text-sm text-gray-600">
           <ApperIcon name="MapPin" className="h-4 w-4 mr-2" />
-          {guest.address}
+          {guest.address_c}
         </div>
         <div className="flex items-center text-sm text-gray-600">
           <ApperIcon name="Calendar" className="h-4 w-4 mr-2" />
-          {guest.stayHistory.length} stays
+          Guest since {guest.created_at_c ? new Date(guest.created_at_c).getFullYear() : 'N/A'}
         </div>
       </div>
 

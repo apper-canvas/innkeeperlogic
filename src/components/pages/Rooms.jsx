@@ -50,8 +50,7 @@ const Rooms = () => {
       const room = rooms.find(r => r.Id === roomId);
       if (room) {
         let newStatus = "vacant-clean";
-        
-        switch (room.status) {
+switch (room.status_c) {
           case "occupied":
             newStatus = "vacant-dirty";
             break;
@@ -67,10 +66,9 @@ const Rooms = () => {
           default:
             newStatus = "vacant-clean";
         }
-
-        await roomService.update(roomId, { 
-          status: newStatus,
-          lastCleaned: newStatus === "vacant-clean" ? new Date().toISOString() : room.lastCleaned
+await roomService.update(roomId, { 
+          status_c: newStatus,
+          last_cleaned_c: newStatus === "vacant-clean" ? new Date().toISOString() : room.last_cleaned_c
         });
         await loadRooms();
         toast.success(`Room ${room.number} status updated to ${newStatus.replace("-", " ")}`);
@@ -94,12 +92,12 @@ const Rooms = () => {
   if (loading) return <Loading type="cards" />;
   if (error) return <Error message={error} onRetry={loadRooms} />;
 
-  const roomStats = {
+const roomStats = {
     total: rooms.length,
-    occupied: rooms.filter(r => r.status === "occupied").length,
-    vacantClean: rooms.filter(r => r.status === "vacant-clean").length,
-    vacantDirty: rooms.filter(r => r.status === "vacant-dirty").length,
-    outOfOrder: rooms.filter(r => r.status === "out-of-order").length
+    occupied: rooms.filter(r => r.status_c === "occupied").length,
+    vacantClean: rooms.filter(r => r.status_c === "vacant-clean").length,
+    vacantDirty: rooms.filter(r => r.status_c === "vacant-dirty").length,
+    outOfOrder: rooms.filter(r => r.status_c === "out-of-order").length
   };
 
   const occupancyRate = roomStats.total > 0 ? 
