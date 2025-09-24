@@ -1,0 +1,121 @@
+[
+  {
+    "Id": 1,
+    "firstName": "John",
+    "lastName": "Smith",
+    "email": "john.smith@email.com",
+    "phone": "+1 (555) 123-4567",
+    "address": "123 Main St, New York, NY 10001",
+    "idDocument": "DL123456789",
+    "vipStatus": true,
+    "stayHistory": [
+      {
+        "reservationId": "1",
+        "checkIn": "2024-01-15",
+        "checkOut": "2024-01-18",
+        "roomNumber": "101"
+      },
+      {
+        "reservationId": "5",
+        "checkIn": "2024-03-22",
+        "checkOut": "2024-03-25",
+        "roomNumber": "205"
+      }
+    ],
+    "specialRequests": "Late checkout preferred",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "Id": 2,
+    "firstName": "Emily",
+    "lastName": "Johnson",
+    "email": "emily.johnson@email.com",
+    "phone": "+1 (555) 234-5678",
+    "address": "456 Oak Ave, Los Angeles, CA 90210",
+    "idDocument": "DL234567890",
+    "vipStatus": false,
+    "stayHistory": [
+      {
+        "reservationId": "2",
+        "checkIn": "2024-02-10",
+        "checkOut": "2024-02-14",
+        "roomNumber": "102"
+      }
+    ],
+    "specialRequests": "Ground floor room",
+    "createdAt": "2024-01-15T00:00:00.000Z"
+  },
+  {
+    "Id": 3,
+    "firstName": "Michael",
+    "lastName": "Davis",
+    "email": "michael.davis@email.com",
+    "phone": "+1 (555) 345-6789",
+    "address": "789 Pine St, Chicago, IL 60601",
+    "idDocument": "DL345678901",
+    "vipStatus": true,
+    "stayHistory": [
+      {
+        "reservationId": "3",
+        "checkIn": "2024-02-20",
+        "checkOut": "2024-02-22",
+        "roomNumber": "201"
+      }
+    ],
+    "specialRequests": "Extra towels",
+    "createdAt": "2024-02-01T00:00:00.000Z"
+  },
+  {
+    "Id": 4,
+    "firstName": "Sarah",
+    "lastName": "Wilson",
+    "email": "sarah.wilson@email.com",
+    "phone": "+1 (555) 456-7890",
+    "address": "321 Elm St, Miami, FL 33101",
+    "idDocument": "DL456789012",
+    "vipStatus": false,
+    "stayHistory": [
+      {
+        "reservationId": "4",
+        "checkIn": "2024-03-01",
+        "checkOut": "2024-03-05",
+        "roomNumber": "202"
+      }
+    ],
+    "specialRequests": "Quiet room away from elevator",
+    "createdAt": "2024-02-15T00:00:00.000Z"
+  },
+  {
+    "Id": 5,
+    "firstName": "David",
+    "lastName": "Brown",
+    "email": "david.brown@email.com",
+    "phone": "+1 (555) 567-8901",
+    "address": "654 Maple Dr, Seattle, WA 98101",
+    "idDocument": "DL567890123",
+    "vipStatus": false,
+    "stayHistory": [],
+    "specialRequests": "Non-smoking room",
+    "createdAt": "2024-03-01T00:00:00.000Z"
+  },
+  {
+    "Id": 6,
+    "firstName": "Jessica",
+    "lastName": "Miller",
+    "email": "jessica.miller@email.com",
+    "phone": "+1 (555) 678-9012",
+    "address": "987 Cedar St, Austin, TX 78701",
+    "idDocument": "DL678901234",
+    "vipStatus": true,
+    "stayHistory": [
+      {
+        "reservationId": "6",
+        "checkIn": "2024-03-15",
+        "checkOut": "2024-03-20",
+        "roomNumber": "301"
+      }
+    ],
+    "specialRequests": "High floor room with city view",
+    "createdAt": "2024-03-10T00:00:00.000Z"
+  }
+]

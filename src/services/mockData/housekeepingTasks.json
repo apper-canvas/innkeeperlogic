@@ -1,0 +1,112 @@
+[
+  {
+    "Id": 1,
+    "roomId": "4",
+    "assignedTo": "Maria Garcia",
+    "taskType": "checkout-cleaning",
+    "priority": "high",
+    "status": "in-progress",
+    "estimatedTime": 45,
+    "completedAt": null,
+    "notes": "Deep clean required - guest stayed 4 nights"
+  },
+  {
+    "Id": 2,
+    "roomId": "9",
+    "assignedTo": "Carlos Rodriguez",
+    "taskType": "maintenance-cleaning",
+    "priority": "medium",
+    "status": "pending",
+    "estimatedTime": 60,
+    "completedAt": null,
+    "notes": "Replace towels and linens"
+  },
+  {
+    "Id": 3,
+    "roomId": "7",
+    "assignedTo": "Jennifer Lee",
+    "taskType": "maintenance",
+    "priority": "urgent",
+    "status": "pending",
+    "estimatedTime": 120,
+    "completedAt": null,
+    "notes": "AC unit repair - room out of order"
+  },
+  {
+    "Id": 4,
+    "roomId": "2",
+    "assignedTo": "Maria Garcia",
+    "taskType": "inspection",
+    "priority": "low",
+    "status": "completed",
+    "estimatedTime": 15,
+    "completedAt": "2024-04-16T10:45:00.000Z",
+    "notes": "Room ready for next guest"
+  },
+  {
+    "Id": 5,
+    "roomId": "5",
+    "assignedTo": "Carlos Rodriguez",
+    "taskType": "checkout-cleaning",
+    "priority": "high",
+    "status": "completed",
+    "estimatedTime": 30,
+    "completedAt": "2024-04-16T14:35:00.000Z",
+    "notes": "Standard checkout cleaning completed"
+  },
+  {
+    "Id": 6,
+    "roomId": "8",
+    "assignedTo": "Jennifer Lee",
+    "taskType": "deep-clean",
+    "priority": "medium",
+    "status": "completed",
+    "estimatedTime": 90,
+    "completedAt": "2024-04-16T12:30:00.000Z",
+    "notes": "Monthly deep clean completed"
+  },
+  {
+    "Id": 7,
+    "roomId": "1",
+    "assignedTo": "Maria Garcia",
+    "taskType": "daily-service",
+    "priority": "medium",
+    "status": "pending",
+    "estimatedTime": 20,
+    "completedAt": null,
+    "notes": "Guest still in room - service after 2 PM"
+  },
+  {
+    "Id": 8,
+    "roomId": "3",
+    "assignedTo": "Carlos Rodriguez",
+    "taskType": "daily-service",
+    "priority": "medium",
+    "status": "in-progress",
+    "estimatedTime": 20,
+    "completedAt": null,
+    "notes": "Guest requested extra towels"
+  },
+  {
+    "Id": 9,
+    "roomId": "11",
+    "assignedTo": "Jennifer Lee",
+    "taskType": "daily-service",
+    "priority": "medium",
+    "status": "pending",
+    "estimatedTime": 20,
+    "completedAt": null,
+    "notes": "Standard daily cleaning"
+  },
+  {
+    "Id": 10,
+    "roomId": "6",
+    "assignedTo": "Maria Garcia",
+    "taskType": "inspection",
+    "priority": "low",
+    "status": "completed",
+    "estimatedTime": 15,
+    "completedAt": "2024-04-16T17:00:00.000Z",
+    "notes": "Suite ready for VIP guest arrival"
+  }
+]
